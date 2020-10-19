@@ -8,6 +8,8 @@ const profile = require('./controllers/profile');
 const image = require('./controllers/image');
 const config = require('./config/config');
 
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0;
+
 const db = knex({
   client: 'pg',
   connection: config.dbConnection,
